@@ -201,26 +201,48 @@ header
 
 .mobile
   padding: 48px 0 80px 0
-  background: url('../img/mobile_bg.png') center (center/cover) no-repeat
+  background: url('../img/mobile_bg.png')
   min-height: 864px
+  .row
+    margin-top: 30px
   &_item
-    position: absolue
-    display: flex
-    justify-content: center
-    align-items: center
-    img
-      display: flex
+    position: relative
+    width: 320px
+    height: 280px
+    margin: 0 auto
     .round
+      position: absolute
+      width: 29px
+      height: 29px
+      background: #000000
+      border-radius: 100%
       display: flex
-    .img_descr
-          font-weight: 400
-          font-size: 24px
-          line-height: 31px
-          display: flex
-          align-items: center
-          text-align: center
-          text-transform: uppercase
-          color: #FFFFFF
+      align-items: center
+      justify-content: center
+      margin: 0 auto
+      bottom: 35px
+      left: 50%
+      transform: translateX(-50%)
+      cursor: pointer
+
+  &_descr
+    font-weight: 400
+    font-size: 24px
+    text-transform: uppercase
+    color: #FFFFFF
+    text-align: center
+    padding-top: 89px
+  
+  @for $i from 1 through 6
+    .mobile_item-#{$i}
+      background: url('../icons/mobile/#{$i}.png')
+      @if #{$i>3}
+        margin-top: 19px
+
+      
+
+
+
 
 
 

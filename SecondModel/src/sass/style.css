@@ -236,42 +236,69 @@ header {
 
 .mobile {
   padding: 48px 0 80px 0;
-  background: url("../img/mobile_bg.png") center center/cover no-repeat;
+  background: url("../img/mobile_bg.png");
   min-height: 864px;
 }
+.mobile .row {
+  margin-top: 30px;
+}
 .mobile_item {
-  position: absolue;
+  position: relative;
+  width: 320px;
+  height: 280px;
+  margin: 0 auto;
+}
+.mobile_item .round {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  background: #000000;
+  border-radius: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0 auto;
+  bottom: 35px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  cursor: pointer;
 }
-.mobile_item img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.mobile_item .round {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.mobile_item .img_descr {
+.mobile_descr {
   font-weight: 400;
   font-size: 24px;
-  line-height: 31px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+  text-align: center;
+  padding-top: 89px;
+}
+.mobile .mobile_item-1 {
+  background: url("../icons/mobile/1.png");
+  margin-top: 19px;
+}
+.mobile .mobile_item-2 {
+  background: url("../icons/mobile/2.png");
+  margin-top: 19px;
+}
+.mobile .mobile_item-3 {
+  background: url("../icons/mobile/3.png");
+  margin-top: 19px;
+}
+.mobile .mobile_item-4 {
+  background: url("../icons/mobile/4.png");
+  margin-top: 19px;
+}
+.mobile .mobile_item-5 {
+  background: url("../icons/mobile/5.png");
+  margin-top: 19px;
+}
+.mobile .mobile_item-6 {
+  background: url("../icons/mobile/6.png");
+  margin-top: 19px;
 }/*# sourceMappingURL=style.css.map */
