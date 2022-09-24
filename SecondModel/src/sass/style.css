@@ -91,6 +91,10 @@ header {
   color: #FFFFFF;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
 }
+.subheader .call:hover {
+  background-image: none;
+  background-color: #1EACC7;
+}
 
 .promo {
   min-height: 800px;
@@ -142,6 +146,10 @@ header {
   color: #FFFFFF;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
 }
+.promo .promo_btn:hover {
+  background-image: none;
+  background-color: #1EACC7;
+}
 
 .advantage {
   min-height: 850px;
@@ -149,7 +157,7 @@ header {
   padding: 18px 0 64px 0;
 }
 
-.advantage .advantage_item {
+.advantage_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,18 +185,17 @@ header {
   border-radius: 100%;
   margin-right: 26px;
 }
-
-.advantage_descr {
-  width: 340px;
-}
-
-.advantage_item .advantage_text {
+.advantage_text {
   font-weight: 300;
   font-size: 15px;
   line-height: 21px;
   color: #202020;
 }
-.advantage_item .advantage_subtitle {
+
+.advantage_descr {
+  width: 340px;
+}
+.advantage_descr .advantage_subtitle {
   font-weight: 400;
   font-size: 17px;
   line-height: 21px;
@@ -249,11 +256,6 @@ header {
   margin: 0 auto;
 }
 .mobile_item .round {
-  position: absolute;
-  width: 29px;
-  height: 29px;
-  background: #000000;
-  border-radius: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,12 +265,43 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
+  position: absolute;
   bottom: 35px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  width: 29px;
+  height: 29px;
+  background: #000000;
+  margin: 0 auto;
+  border-radius: 100%;
   cursor: pointer;
+}
+.mobile_item .round::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background-color: #1EACC7;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.mobile_item .round::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 14px;
+  background-color: #1EACC7;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.mobile_item .round:hover:before, .mobile_item .round:hover:after {
+  background-color: #FF5656;
 }
 .mobile_descr {
   font-weight: 400;
@@ -301,4 +334,93 @@ header {
 .mobile .mobile_item-6 {
   background: url("../icons/mobile/6.png");
   margin-top: 19px;
+}
+
+.possibility {
+  min-height: 502px;
+  padding: 56px 0 322px 0;
+  background: #070716;
+}
+.possibility .label {
+  background: #ffffff;
+  color: #000000;
+}
+.possibility .subtitle {
+  color: #ffffff;
+  margin-top: 27px;
+}
+.possibility .title {
+  color: #ffffff;
+}
+
+.possibility_bottom {
+  position: relative;
+  min-height: 397px;
+  padding: 210px 0 137px 0;
+  background: url("../img/mobile_bg.png");
+}
+.possibility_bottom img {
+  position: absolute;
+  bottom: 184px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.possibility_bottom_text {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 300;
+  font-size: 17px;
+  color: #222222;
+  width: 327px;
+}
+
+.condition {
+  padding: 68px 0 87px 0;
+  min-height: 917px;
+}
+.condition_subtitle {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 24px;
+  color: #1EACC7;
+}
+.condition .condition_list_1 {
+  list-style-image: url("../icons/check_blue.png");
+}
+.condition .block_1 {
+  margin: 33px 0;
+}
+.condition .condition_list_2 {
+  list-style-image: url("../icons/check_blue.png");
+}
+.condition .block_2 {
+  margin: 33px 0;
+}
+.condition_subtitle-3 {
+  color: #FF5656;
+}
+.condition .condition_list_3 {
+  list-style: url("../icons/check_red.png");
+}
+.condition .block_3 {
+  margin-top: 33px;
+  margin-bottom: 0px;
+}
+.condition_subtitle-4 {
+  color: #FF5656;
+}
+.condition .condition_list_4 {
+  list-style: url("../icons/check_red.png");
+}
+.condition .block_4 {
+  margin-top: 33px;
+  margin-bottom: 0px;
+}
+.condition_list li {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 24px;
+  color: #222222;
 }/*# sourceMappingURL=style.css.map */

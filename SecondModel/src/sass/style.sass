@@ -1,6 +1,15 @@
 *
   font-family: 'Roboto', sans-serif
 
+$blue: #1EACC7
+
+@mixin btn_hover
+  &:hover
+    background-image: none
+    background-color: $blue
+  
+    
+
 nav
   width: 100%
   position: fixed
@@ -80,6 +89,7 @@ header
     text-transform: uppercase
     color: #FFFFFF
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+    @include btn_hover
 
 .promo
   min-height: 800px
@@ -118,7 +128,7 @@ header
     margin-top: 115px
     width: 259px
     height: 63px
-    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+    background: linear-gradient(0deg, $blue 0%, #4CE2FF 100%)
     box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
     border-radius: 4px
     border: none
@@ -128,6 +138,7 @@ header
     text-transform: uppercase
     color: #FFFFFF
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+    @include btn_hover
 
 .advantage
   min-height: 850px
@@ -137,7 +148,7 @@ header
 
 
 .advantage
-  .advantage_item
+  &_item
     display: flex
     justify-content: center
     align-items: center
@@ -153,21 +164,22 @@ header
     border-radius: 100%
     margin-right: 26px
 
-.advantage_descr
-  width: 340px
-
-.advantage_item
-  .advantage_text
+  &_text
     font-weight: 300
     font-size: 15px
     line-height: 21px
     color: #202020
 
+.advantage_descr
+  width: 340px
+
+
+
   .advantage_subtitle
     font-weight: 400
     font-size: 17px
     line-height: 21px
-    color: #1EACC7
+    color: $blue
 
 .label
     width: 113px
@@ -211,19 +223,45 @@ header
     height: 280px
     margin: 0 auto
     .round
-      position: absolute
-      width: 29px
-      height: 29px
-      background: #000000
-      border-radius: 100%
       display: flex
       align-items: center
       justify-content: center
-      margin: 0 auto
+      position: absolute
       bottom: 35px
       left: 50%
       transform: translateX(-50%)
+      width: 29px
+      height: 29px
+      background: #000000
+      margin: 0 auto
+      border-radius: 100%
       cursor: pointer
+      &::before
+        content: ''
+        display: block
+        position: absolute 
+        width: 14px
+        height: 2px
+        background-color: $blue
+        transition: 0.3s all
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        width: 2px
+        height: 14px
+        background-color: $blue
+        left: 50%
+        transform: translateX(-50%)
+        transition: 0.3s all
+      &:hover
+        &:before, &:after
+          background-color: #FF5656  
+        
+        
+
+
+        
 
   &_descr
     font-weight: 400
@@ -238,6 +276,68 @@ header
       background: url('../icons/mobile/#{$i}.png')
       @if #{$i>3}
         margin-top: 19px
+
+.possibility
+  min-height: 502px
+  padding: 56px 0 322px 0
+  background: #070716
+  .label
+    background: #ffffff
+    color: #000000
+  .subtitle
+    color: #ffffff
+    margin-top: 27px
+  .title
+    color: #ffffff
+
+.possibility_bottom
+  position: relative
+  min-height: 397px
+  padding: 210px 0 137px 0
+  background: url('../img/mobile_bg.png')
+  img
+    position: absolute
+    bottom: 184px
+    left: 50%
+    transform: translateX(-50%)
+  &_text
+    margin: 0 auto
+    text-align: center
+    font-weight: 300
+    font-size: 17px
+    color: #222222
+    width: 327px
+
+.condition
+  padding: 68px 0 87px 0
+  min-height: 917px
+  &_subtitle
+    font-weight: 400
+    font-size: 22px
+    line-height: 24px
+    color: $blue
+  @for $i from 1 through 4
+    @if ($i > 2)
+      &_subtitle-#{$i}
+        color:#FF5656
+      .condition_list_#{$i}
+        list-style: url('../icons/check_red.png')
+      .block_#{$i}
+        margin-top: 33px
+        margin-bottom: 0px
+    @else
+      .condition_list_#{$i}
+        list-style-image: url('../icons/check_blue.png')
+      .block_#{$i}
+        margin: 33px 0
+  &_list
+    li
+      font-style: normal
+      font-weight: 300
+      font-size: 17px
+      line-height: 24px
+      color: #222222
+  
 
       
 
