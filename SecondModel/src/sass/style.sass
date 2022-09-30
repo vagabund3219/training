@@ -331,12 +331,140 @@ header
       .block_#{$i}
         margin: 33px 0
   &_list
+    padding-left: 45px
+    margin-top: 20px
     li
       font-style: normal
       font-weight: 300
       font-size: 17px
       line-height: 24px
       color: #222222
+      margin-bottom: 10px
+
+
+  &_text
+    font-weight: 300
+    font-size: 17px
+    color: $blue
+
+.world
+  width: 100%
+  min-height: 716px
+  padding: 48px 0 21.5px 0
+  background: url('../img/world_bg.png')
+  .label
+    background-color: #ffffff
+    color: #000000
+  .title
+    margin-top: 26px
+    color:#ffffff
+  .subtitle
+    margin-top: 2px
+    color:#ffffff
+    opacity: 0.9
+  &_bottom_text
+    a
+      outline: none
+      text-decoration: none
+      color: $blue
+      &:hover
+        color: #FF5656
+        transition: 0.7s
+    margin-top: 456px
+    text-align: center
+    text-transform: uppercase
+    text-decoration: none
+  &button
+    font-weight: 400
+    font-size: 15px
+    line-height: 68px
+   
+.footer
+  min-height: 160px
+  padding: 14px 22px 40px 22px
+  &_line
+    height: 4px
+    width: 300px
+    background-color: $blue
+    margin: 0 auto
+  &_wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 32px
+  &_wrapper > div
+    width: 33%
+    &:nth-child(3)
+      display: flex
+      justify-content: flex-end
+  &_social
+    width: 160px
+    display: flex
+    justify-content: space-around
+    &_item
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 30px
+      height: 30px
+      border-radius: 100%
+      background: #070716
+      text-decoration: none
+      i 
+        color: #fff
+  &_center
+    width: 410px
+    margin: 0 auto
+    &_top
+      display: flex
+      justify-content: space-between
+      padding: 0 10px
+    &_bottom
+      display: flex
+      justify-content: space-between
+      margin-top: 10px
+      a
+        color: #999999
+        font-size: 11px
+        font-weight: 300
+        text-transform: uppercase
+        text-decoration: none
+  &_links_lang
+    display: block
+    margin: 0 auto
+    color: $blue
+    font-size: 11px
+    font-weight: 400
+    margin-top: 19px
+    text-transform: uppercase
+    text-align: center
+    text-decoration: none
+  &_download
+    display: flex
+    justify-content: space-between
+    width: 400px
+        
+  &_top_link
+    text-decoration: none
+    font-weight: 300
+    font-size: 15px
+    text-transform: uppercase
+    color: #070716
+
+
+
+
+      
+
+  
+
+
+
+    
+
+  
+  
+     
     
 
       
