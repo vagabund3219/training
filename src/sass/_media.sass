@@ -1,11 +1,15 @@
 
 @media(max-width: 1200px) 
     .menu
+        padding: 13px 20px 0 70px
         &_item
             padding-right: 20px
         &_link
-            font-size: 12px
-
+            font-size: 15px
+        
+    .subheader 
+        &_number
+            font-size: 18px
     .promo
         &_header
             font-size: 50px
@@ -25,28 +29,156 @@
             justify-content: space-between
             .img_footer
                 margin-top: 8px
-            
+        &_center
+            margin-left: -47px
 
 @media(max-width: 991px) 
     .menu
-        padding: 13px 32px
+        padding: 13px 2px
         &_item
-            padding-right: 9px
+            padding-right: 11px
         &_link
-            font-size: 12px
+            font-size: 13px
     .subheader
         min-height: 68px
-    .subheader .number
-        font-size: 20px
+    
+    .subheader 
+        &_number
+         font-size: 18px
     .subheader  .above_number
+        font-size: 12px
         margin-top: 10px
     .subheader .call
         margin-top: 11px
+        width: 100%
+        height: 45px
     .subheader .under_logo
         font-size: 12px
     .subheader .logo_header
         margin-top: 11px
-    .promo .title
-            font-size: 50px
-    .promo .subtitle
-        font-size: 50px
+        width: 195px
+    .under_logo
+        font-size: 11px
+    .promo_title
+        font-size: 40px
+    .promo_subtitle
+        font-size: 30px
+    .advantage
+        &_item
+            align-items: center
+        &_subtitle
+            width: 370px
+        &_text
+            width: 370px
+        .title
+            font-size: 31px
+
+
+            
+
+    .footer
+        &_wrapper 
+            flex-wrap: wrap
+        &_wrapper > div
+            width: 100%
+            display: flex
+            justify-content: center
+            margin-bottom: 20px
+            &:nth-child(2)
+                order: 1
+            &:nth-child(1)
+                order: 2
+                width: 100%
+            &:nth-child(3)
+                order: 3
+                width: 100%
+                justify-content: center
+ 
+
+        &_download
+            width:65%
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            .img_footer
+                margin-top: 0 
+        &_center
+            margin: 0
+
+@media(max-width: 767px)
+    .menu
+        position: fixed
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        top: 0
+        left: -100%
+        width: 50%
+        height: 100vh
+        padding: 20px 15px
+        background-color: rgba(0,0,0, 0.8)
+        transition: 0.6s all
+        &_active
+            left: 0
+        &_item
+            padding-right: 0
+            border: none
+            margin-top: 10px
+        &_link
+            font-size: 20px
+    .hamburger
+        display: block
+        position: absolute
+        top: 50%
+        right: 10px
+        transform: translateY(-50%)
+        width: 26px
+        height: 12px
+        span
+            display: block
+            height: 2px
+            width: 100%
+            background-color: #fff
+            margin-bottom: 2px
+            transition: 0.6s all
+        &_active
+            span
+                margin-bottom: -2px 
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(3px) rotate(45deg)                
+    .xs-hidden
+        display: none          
+    .xs-visible
+        display: block
+    .subheader
+        &_number
+            display: block
+            margin-top: 7px
+            font-weight: 400
+            font-size: 18px
+            line-height: 12px
+            text-align: right
+            text-transform: uppercase
+            text-decoration: none
+            color: #FFFFFF
+        .call
+            width: 200px
+            height: 40px
+            display: block
+            margin: 0 auto
+            margin-top: 10px
+        
+
+
+
+     
+
+
+
+
+        
